@@ -3,6 +3,7 @@
 
 import crypto from "crypto";
 import https from "https";
+import "dotenv/config";
 
 const account = "jonathankingfc";
 const password = process.env.QUAY_PASSWORD;
