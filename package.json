@@ -1,0 +1,11 @@
+{
+  "name": "akami-reproduce",
+  "scripts": {
+    "start": "tsx test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
