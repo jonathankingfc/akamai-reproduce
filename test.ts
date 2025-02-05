@@ -36,8 +36,8 @@ const configContent = JSON.stringify({
   config: {},
   rootfs: {
     diff_ids: [
-      "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4",
-      "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4",
+      "sha256:c6f988f4874bb0add23a778f753c65efe992244e148a1d2ec2a8b664fb66bbd1",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
     ],
     type: "layers",
   },
@@ -104,9 +104,26 @@ function makeRequest(
     const token = JSON.parse(authResponse.data).token;
     const headers = { Authorization: `Bearer ${token}` };
 
-    // get blobs
-    // const blobRes = await makeRequest('GET', `/v2/${org}/${repo}/manifests/${tag}`, { ...uploadHeaders }, manifest);
-    // console.log(`Blob upload status: ${blobRes.data}`);
+    // push blobs
+    const uploadHeaders = {
+      ...headers,
+      "Content-Type": "application/octet-stream",
+    };
+    const layerResponse = await makeRequest(
+      "POST",
+      `/v2/${org}/${repo}/blobs/uploads/?digest=${layerSha}`,
+      uploadHeaders,
+      layerContent
+    );
+    console.log(`Layer upload status: ${layerResponse.status}`);
+    console.log(layerResponse.data);
+
+    const layer = await makeRequest(
+      "GET",
+      `/v2/${org}/${repo}/blobs/${layerSha}`,
+      headers
+    );
+    console.log(`Layer digest: ${JSON.stringify(layer.data)}`);
 
     const manifestResponse = await makeRequest(
       "PUT",
