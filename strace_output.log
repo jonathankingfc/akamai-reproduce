@@ -1,0 +1,420 @@
+strace: Process 122188 attached
+strace: Process 122189 attached
+strace: Process 122190 attached
+strace: Process 122191 attached
+strace: Process 122192 attached
+strace: Process 122193 attached
+[pid 122191] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+strace: Process 122194 attached
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+time="2025-02-10T21:19:57Z" level=debug msg="Using registries.d directory /etc/containers/registries.d"
+time="2025-02-10T21:19:57Z" level=debug msg="Loading registries configuration \"/etc/containers/registries.conf\""
+time="2025-02-10T21:19:57Z" level=debug msg="Loading registries configuration \"/etc/containers/registries.conf.d/shortnames.conf\""
+time="2025-02-10T21:19:57Z" level=debug msg="Trying to access \"quay.io/jonathankingfc/test-akamai:latest\""
+time="2025-02-10T21:19:57Z" level=debug msg="Found credentials for quay.io/jonathankingfc/test-akamai in credential helper containers-auth.json in file /run/user/1002/containers/auth.json"
+time="2025-02-10T21:19:57Z" level=debug msg=" No signature storage configuration found for quay.io/jonathankingfc/test-akamai:latest, using built-in default file:///home/joking/.local/share/containers/sigstore"
+time="2025-02-10T21:19:57Z" level=debug msg="Looking for TLS certificates and private keys in /etc/docker/certs.d/quay.io"
+time="2025-02-10T21:19:57Z" level=debug msg="GET https://quay.io/v2/"
+[pid 122187] socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+[pid 122187] connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 122187] socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+[pid 122187] connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 122187] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122187] setsockopt(3, SOL_IP, IP_RECVERR, [1], 4) = 0
+[pid 122187] connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+[pid 122187] sendmmsg(3, [{msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="lo\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\1\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}, {msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base=".`\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\34\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}], 2, MSG_NOSIGNAL) = 2
+[pid 122187] recvfrom(3, "lo\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\1\0\1\300\f\0\1\0\1\0"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 132
+[pid 122187] recvfrom(3, ".`\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\34\0\1\300\f\0\34\0\1\0"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 204
+[pid 122187] socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 3
+[pid 122187] bind(3, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+[pid 122187] getsockname(3, {sa_family=AF_NETLINK, nl_pid=122187, nl_groups=00000000}, [12]) = 0
+[pid 122187] sendto(3, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1739222397, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+[pid 122187] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=32, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens4")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("10.186.0.3")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("10.186.0.3")], [{nla_len=9, nla_type=IFA_LABEL}, "ens4"], [{nla_len=8, nla_type=IFA_FLAGS}, 0], [{nla_len=8, nla_type=IFA_RT_PRIORITY}, 100], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=72365, ifa_valid=72365, cstamp=457, tstamp=34560801}]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 164
+[pid 122187] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("ens4")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::4001:aff:feba:3")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=451, tstamp=451}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x03"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 152
+[pid 122187] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+[pid 122187] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122187] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.222.212")}, 16) = 0
+[pid 122187] getsockname(3, {sa_family=AF_INET, sin_port=htons(41235), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.131.21")}, 16) = 0
+[pid 122187] getsockname(3, {sa_family=AF_INET, sin_port=htons(43891), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("54.90.151.151")}, 16) = 0
+[pid 122187] getsockname(3, {sa_family=AF_INET, sin_port=htons(59734), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.72.230.71")}, 16) = 0
+[pid 122187] getsockname(3, {sa_family=AF_INET, sin_port=htons(46106), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("3.226.123.8")}, 16) = 0
+[pid 122187] getsockname(3, {sa_family=AF_INET, sin_port=htons(38478), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("44.196.190.59")}, 16) = 0
+[pid 122187] getsockname(3, {sa_family=AF_INET, sin_port=htons(52137), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122187] socket(AF_INET6, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122187] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:f899:cd2:2481:980d", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:2380:e036:7f50:9a03", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:829d:d72d:82fc:af13", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:4a5b:5445:6e34:d833", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:dde4:4c4f:a6f8:7576", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122187] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122187] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:2ed3:dbde:e962:6356", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122187] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122187] connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.2.222.212")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid 122193] getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+[pid 122193] getpeername(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.2.222.212")}, [112 => 16]) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(43250), sin_addr=inet_addr("10.186.0.3")}, [112 => 16]) = 0
+[pid 122193] setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 122193] setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid 122193] setsockopt(3, SOL_TCP, TCP_KEEPINTVL, [30], 4) = 0
+[pid 122193] setsockopt(3, SOL_TCP, TCP_KEEPIDLE, [30], 4) = 0
+[pid 122189] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122189] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122187] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+strace: Process 122195 attached
+[pid 122190] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122190] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122190] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+time="2025-02-10T21:19:57Z" level=debug msg="Ping https://quay.io/v2/ status 401"
+time="2025-02-10T21:19:57Z" level=debug msg="GET https://quay.io/v2/auth?account=jonathankingfc&scope=repository%3Ajonathankingfc%2Ftest-akamai%3Apull&service=quay.io"
+[pid 122193] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122193] setsockopt(3, SOL_IP, IP_RECVERR, [1], 4) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+[pid 122193] sendmmsg(3, [{msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="t8\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\1\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}, {msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\232&\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\34\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}], 2, MSG_NOSIGNAL) = 2
+[pid 122193] recvfrom(3, "t8\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\1\0\1\300\f\0\1\0\1\0"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 132
+[pid 122193] recvfrom(3, "\232&\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\34\0\1\300\f\0\34\0\1\0"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 204
+[pid 122193] socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 3
+[pid 122193] bind(3, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+[pid 122193] getsockname(3, {sa_family=AF_NETLINK, nl_pid=122187, nl_groups=00000000}, [12]) = 0
+[pid 122193] sendto(3, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1739222397, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+[pid 122193] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=32, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens4")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("10.186.0.3")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("10.186.0.3")], [{nla_len=9, nla_type=IFA_LABEL}, "ens4"], [{nla_len=8, nla_type=IFA_FLAGS}, 0], [{nla_len=8, nla_type=IFA_RT_PRIORITY}, 100], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=72365, ifa_valid=72365, cstamp=457, tstamp=34560801}]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 164
+[pid 122193] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("ens4")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::4001:aff:feba:3")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=451, tstamp=451}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x03"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 152
+[pid 122193] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222397, nlmsg_pid=122187}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+[pid 122193] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.72.230.71")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(42598), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("54.90.151.151")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(39704), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("3.226.123.8")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(34911), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("44.196.190.59")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(34993), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.222.212")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(57764), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.131.21")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(49445), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] socket(AF_INET6, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:f899:cd2:2481:980d", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:2380:e036:7f50:9a03", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:2ed3:dbde:e962:6356", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:dde4:4c4f:a6f8:7576", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:4a5b:5445:6e34:d833", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:829d:d72d:82fc:af13", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.72.230.71")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid 122195] getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+[pid 122195] getpeername(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.72.230.71")}, [112 => 16]) = 0
+[pid 122195] getsockname(3, {sa_family=AF_INET, sin_port=htons(39536), sin_addr=inet_addr("10.186.0.3")}, [112 => 16]) = 0
+[pid 122195] setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 122195] setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid 122195] setsockopt(3, SOL_TCP, TCP_KEEPINTVL, [30], 4) = 0
+[pid 122195] setsockopt(3, SOL_TCP, TCP_KEEPIDLE, [30], 4) = 0
+[pid 122190] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+time="2025-02-10T21:19:58Z" level=debug msg="Increasing token expiration to: 60 seconds"
+time="2025-02-10T21:19:58Z" level=debug msg="GET https://quay.io/v2/jonathankingfc/test-akamai/manifests/latest"
+[pid 122195] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122195] setsockopt(3, SOL_IP, IP_RECVERR, [1], 4) = 0
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+[pid 122195] sendmmsg(3, [{msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="O\177\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\1\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}, {msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\303{\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\34\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}], 2, MSG_NOSIGNAL) = 2
+[pid 122195] recvfrom(3, "O\177\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\1\0\1\300\f\0\1\0\1\0"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 132
+[pid 122195] recvfrom(3, "\303{\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\34\0\1\300\f\0\34\0\1\0"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 204
+[pid 122195] socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 3
+[pid 122195] bind(3, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+[pid 122195] getsockname(3, {sa_family=AF_NETLINK, nl_pid=122187, nl_groups=00000000}, [12]) = 0
+[pid 122195] sendto(3, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1739222398, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+[pid 122195] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=32, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens4")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("10.186.0.3")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("10.186.0.3")], [{nla_len=9, nla_type=IFA_LABEL}, "ens4"], [{nla_len=8, nla_type=IFA_FLAGS}, 0], [{nla_len=8, nla_type=IFA_RT_PRIORITY}, 100], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=72364, ifa_valid=72364, cstamp=457, tstamp=34560801}]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 164
+[pid 122195] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("ens4")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::4001:aff:feba:3")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=451, tstamp=451}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x03"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 152
+[pid 122195] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+[pid 122195] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("3.226.123.8")}, 16) = 0
+[pid 122195] getsockname(3, {sa_family=AF_INET, sin_port=htons(35158), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.72.230.71")}, 16) = 0
+[pid 122195] getsockname(3, {sa_family=AF_INET, sin_port=htons(43284), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("54.90.151.151")}, 16) = 0
+[pid 122195] getsockname(3, {sa_family=AF_INET, sin_port=htons(60186), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.222.212")}, 16) = 0
+[pid 122195] getsockname(3, {sa_family=AF_INET, sin_port=htons(45201), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("44.196.190.59")}, 16) = 0
+[pid 122195] getsockname(3, {sa_family=AF_INET, sin_port=htons(45007), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.131.21")}, 16) = 0
+[pid 122195] getsockname(3, {sa_family=AF_INET, sin_port=htons(55195), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122195] socket(AF_INET6, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122195] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:2ed3:dbde:e962:6356", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:dde4:4c4f:a6f8:7576", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:4a5b:5445:6e34:d833", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:2380:e036:7f50:9a03", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:829d:d72d:82fc:af13", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:f899:cd2:2481:980d", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122195] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("3.226.123.8")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid 122193] getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+[pid 122193] getpeername(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("3.226.123.8")}, [112 => 16]) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(43594), sin_addr=inet_addr("10.186.0.3")}, [112 => 16]) = 0
+[pid 122193] setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 122193] setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid 122193] setsockopt(3, SOL_TCP, TCP_KEEPINTVL, [30], 4) = 0
+[pid 122193] setsockopt(3, SOL_TCP, TCP_KEEPIDLE, [30], 4) = 0
+time="2025-02-10T21:19:58Z" level=debug msg="Content-Type from manifest GET is \"application/vnd.oci.image.manifest.v1+json\""
+time="2025-02-10T21:19:58Z" level=debug msg="Using blob info cache at /home/joking/.local/share/containers/cache/blob-info-cache-v1.boltdb"
+time="2025-02-10T21:19:58Z" level=debug msg="IsRunningImageAllowed for image docker:quay.io/jonathankingfc/test-akamai:latest"
+time="2025-02-10T21:19:58Z" level=debug msg=" Using default policy section"
+time="2025-02-10T21:19:58Z" level=debug msg=" Requirement 0: allowed"
+time="2025-02-10T21:19:58Z" level=debug msg="Overall: allowed"
+Getting image source signatures
+time="2025-02-10T21:19:58Z" level=debug msg="Reading /home/joking/.local/share/containers/sigstore/jonathankingfc/test-akamai@sha256=5d2d63bad26f62d530bdb97ca25468a12df234c7c7fc1a58e02330c381761843/signature-1"
+time="2025-02-10T21:19:58Z" level=debug msg="Not looking for sigstore attachments: disabled by configuration"
+time="2025-02-10T21:19:58Z" level=debug msg="Manifest has MIME type application/vnd.oci.image.manifest.v1+json, ordered candidate list [application/vnd.oci.image.manifest.v1+json, application/vnd.oci.image.index.v1+json]"
+time="2025-02-10T21:19:58Z" level=debug msg="... will first try using the original manifest unmodified"
+Copying blob sha256:6b019f48672447f54180353cc2feedc243928a647779e8ee0a40ba6636d6bbe6
+time="2025-02-10T21:19:58Z" level=debug msg="Checking if we can reuse blob sha256:6b019f48672447f54180353cc2feedc243928a647779e8ee0a40ba6636d6bbe6: general substitution = true, compression for MIME type \"application/vnd.oci.image.layer.v1.tar+gzip\" = true"
+time="2025-02-10T21:19:58Z" level=debug msg="Downloading /v2/jonathankingfc/test-akamai/blobs/sha256:6b019f48672447f54180353cc2feedc243928a647779e8ee0a40ba6636d6bbe6"
+time="2025-02-10T21:19:58Z" level=debug msg="GET https://quay.io/v2/jonathankingfc/test-akamai/blobs/sha256:6b019f48672447f54180353cc2feedc243928a647779e8ee0a40ba6636d6bbe6"
+[pid 122193] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122193] setsockopt(3, SOL_IP, IP_RECVERR, [1], 4) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+[pid 122193] sendmmsg(3, [{msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base=">\312\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\1\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}, {msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\331\315\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\34\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}], 2, MSG_NOSIGNAL) = 2
+[pid 122193] recvfrom(3, ">\312\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\1\0\1\300\f\0\1\0\1\0"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 132
+[pid 122193] recvfrom(3, "\331\315\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\34\0\1\300\f\0\34\0\1\0"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 204
+[pid 122193] socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 3
+[pid 122193] bind(3, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+[pid 122193] getsockname(3, {sa_family=AF_NETLINK, nl_pid=122187, nl_groups=00000000}, [12]) = 0
+[pid 122193] sendto(3, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1739222398, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+[pid 122193] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=32, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens4")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("10.186.0.3")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("10.186.0.3")], [{nla_len=9, nla_type=IFA_LABEL}, "ens4"], [{nla_len=8, nla_type=IFA_FLAGS}, 0], [{nla_len=8, nla_type=IFA_RT_PRIORITY}, 100], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=72364, ifa_valid=72364, cstamp=457, tstamp=34560801}]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 164
+[pid 122193] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("ens4")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::4001:aff:feba:3")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=451, tstamp=451}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x03"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 152
+[pid 122193] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+[pid 122193] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("54.90.151.151")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(41078), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.131.21")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(51152), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.222.212")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(41101), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("3.226.123.8")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(58386), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.72.230.71")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(54723), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("44.196.190.59")}, 16) = 0
+[pid 122193] getsockname(3, {sa_family=AF_INET, sin_port=htons(49715), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122193] socket(AF_INET6, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:2380:e036:7f50:9a03", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:2ed3:dbde:e962:6356", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:4a5b:5445:6e34:d833", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:dde4:4c4f:a6f8:7576", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:829d:d72d:82fc:af13", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122193] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:f899:cd2:2481:980d", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122193] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122193] connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("54.90.151.151")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid 122194] getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+[pid 122194] getpeername(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("54.90.151.151")}, [112 => 16]) = 0
+[pid 122194] getsockname(3, {sa_family=AF_INET, sin_port=htons(48488), sin_addr=inet_addr("10.186.0.3")}, [112 => 16]) = 0
+[pid 122194] setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 122194] setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid 122194] setsockopt(3, SOL_TCP, TCP_KEEPINTVL, [30], 4) = 0
+[pid 122194] setsockopt(3, SOL_TCP, TCP_KEEPIDLE, [30], 4) = 0
+[pid 122195] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122195] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122195] setsockopt(3, SOL_IP, IP_RECVERR, [1], 4) = 0
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+[pid 122195] sendmmsg(3, [{msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\353\223\1 \0\1\0\0\0\0\0\1\5cdn01\4quay\2io\0\0\1\0\1\0"..., iov_len=42}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=42}, {msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\312\216\1 \0\1\0\0\0\0\0\1\5cdn01\4quay\2io\0\0\34\0\1\0"..., iov_len=42}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=42}], 2, MSG_NOSIGNAL) = 2
+[pid 122195] recvfrom(3, "\312\216\201\200\0\1\0\4\0\0\0\1\5cdn01\4quay\2io\0\0\34\0\1\300"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 171
+[pid 122195] recvfrom(3, "\353\223\201\200\0\1\0\4\0\0\0\1\5cdn01\4quay\2io\0\0\1\0\1\300"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 147
+[pid 122195] socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 3
+[pid 122195] bind(3, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+[pid 122195] getsockname(3, {sa_family=AF_NETLINK, nl_pid=122187, nl_groups=00000000}, [12]) = 0
+[pid 122195] sendto(3, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1739222398, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+[pid 122195] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=32, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens4")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("10.186.0.3")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("10.186.0.3")], [{nla_len=9, nla_type=IFA_LABEL}, "ens4"], [{nla_len=8, nla_type=IFA_FLAGS}, 0], [{nla_len=8, nla_type=IFA_RT_PRIORITY}, 100], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=72363, ifa_valid=72363, cstamp=457, tstamp=34560801}]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 164
+[pid 122195] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("ens4")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::4001:aff:feba:3")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=451, tstamp=451}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x03"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 152
+[pid 122195] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222398, nlmsg_pid=122187}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+[pid 122195] socket(AF_INET6, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122195] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2a02:26f0:3500:3::b818:4d42", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2a02:26f0:3500:3::b818:4d4f", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("2.16.56.93")}, 16) = 0
+[pid 122195] getsockname(3, {sa_family=AF_INET6, sin6_port=htons(53221), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:10.186.0.3", &sin6_addr), sin6_scope_id=0}, [28]) = 0
+[pid 122195] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("2.16.56.86")}, 16) = 0
+[pid 122195] getsockname(3, {sa_family=AF_INET6, sin6_port=htons(35001), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "::ffff:10.186.0.3", &sin6_addr), sin6_scope_id=0}, [28]) = 0
+[pid 122195] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122195] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122195] connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("2.16.56.93")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid 122195] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122190] getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+[pid 122190] getpeername(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("2.16.56.93")}, [112 => 16]) = 0
+[pid 122190] getsockname(3, {sa_family=AF_INET, sin_port=htons(43542), sin_addr=inet_addr("10.186.0.3")}, [112 => 16]) = 0
+[pid 122190] setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 122190] setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid 122190] setsockopt(3, SOL_TCP, TCP_KEEPINTVL, [30], 4) = 0
+[pid 122190] setsockopt(3, SOL_TCP, TCP_KEEPIDLE, [30], 4) = 0
+time="2025-02-10T21:19:59Z" level=debug msg="Detected compression format gzip"
+time="2025-02-10T21:19:59Z" level=debug msg="Using original blob without modification"
+Copying blob sha256:96ed9c4aa62dce9988bfe11b70c53eea09d86e2395b7dc076c039eda60f928ab
+time="2025-02-10T21:19:59Z" level=debug msg="Checking if we can reuse blob sha256:96ed9c4aa62dce9988bfe11b70c53eea09d86e2395b7dc076c039eda60f928ab: general substitution = true, compression for MIME type \"application/vnd.oci.image.layer.v1.tar+gzip\" = true"
+time="2025-02-10T21:19:59Z" level=debug msg="Downloading /v2/jonathankingfc/test-akamai/blobs/sha256:96ed9c4aa62dce9988bfe11b70c53eea09d86e2395b7dc076c039eda60f928ab"
+time="2025-02-10T21:19:59Z" level=debug msg="GET https://quay.io/v2/jonathankingfc/test-akamai/blobs/sha256:96ed9c4aa62dce9988bfe11b70c53eea09d86e2395b7dc076c039eda60f928ab"
+[pid 122190] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122190] setsockopt(3, SOL_IP, IP_RECVERR, [1], 4) = 0
+[pid 122190] connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+[pid 122190] sendmmsg(3, [{msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\306\1\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\1\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}, {msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\301\3\1 \0\1\0\0\0\0\0\1\4quay\2io\0\0\34\0\1\0\0)\4\260\0\0"..., iov_len=36}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=36}], 2, MSG_NOSIGNAL) = 2
+[pid 122190] recvfrom(3, "\306\1\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\1\0\1\300\f\0\1\0\1\0"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 132
+[pid 122190] recvfrom(3, "\301\3\201\200\0\1\0\6\0\0\0\1\4quay\2io\0\0\34\0\1\300\f\0\34\0\1\0"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 204
+[pid 122190] socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 3
+[pid 122190] bind(3, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+[pid 122190] getsockname(3, {sa_family=AF_NETLINK, nl_pid=122187, nl_groups=00000000}, [12]) = 0
+[pid 122190] sendto(3, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1739222399, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+[pid 122190] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=32, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens4")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("10.186.0.3")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("10.186.0.3")], [{nla_len=9, nla_type=IFA_LABEL}, "ens4"], [{nla_len=8, nla_type=IFA_FLAGS}, 0], [{nla_len=8, nla_type=IFA_RT_PRIORITY}, 100], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=72363, ifa_valid=72363, cstamp=457, tstamp=34560801}]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 164
+[pid 122190] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("ens4")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::4001:aff:feba:3")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=451, tstamp=451}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x03"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 152
+[pid 122190] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+[pid 122190] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122190] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("44.196.190.59")}, 16) = 0
+[pid 122190] getsockname(3, {sa_family=AF_INET, sin_port=htons(49028), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.222.212")}, 16) = 0
+[pid 122190] getsockname(3, {sa_family=AF_INET, sin_port=htons(37846), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.2.131.21")}, 16) = 0
+[pid 122190] getsockname(3, {sa_family=AF_INET, sin_port=htons(39889), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("54.90.151.151")}, 16) = 0
+[pid 122190] getsockname(3, {sa_family=AF_INET, sin_port=htons(33380), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("52.72.230.71")}, 16) = 0
+[pid 122190] getsockname(3, {sa_family=AF_INET, sin_port=htons(57659), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("3.226.123.8")}, 16) = 0
+[pid 122190] getsockname(3, {sa_family=AF_INET, sin_port=htons(55954), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122190] socket(AF_INET6, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122190] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:2380:e036:7f50:9a03", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf02:4a5b:5445:6e34:d833", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:f899:cd2:2481:980d", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf01:dde4:4c4f:a6f8:7576", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:829d:d72d:82fc:af13", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122190] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122190] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2600:1f18:483:cf00:2ed3:dbde:e962:6356", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122190] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122190] connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("44.196.190.59")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid 122190] getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+[pid 122190] getpeername(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("44.196.190.59")}, [112 => 16]) = 0
+[pid 122190] getsockname(3, {sa_family=AF_INET, sin_port=htons(46418), sin_addr=inet_addr("10.186.0.3")}, [112 => 16]) = 0
+[pid 122190] setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 122190] setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid 122190] setsockopt(3, SOL_TCP, TCP_KEEPINTVL, [30], 4) = 0
+[pid 122190] setsockopt(3, SOL_TCP, TCP_KEEPIDLE, [30], 4) = 0
+[pid 122195] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122190] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122189] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122189] setsockopt(3, SOL_IP, IP_RECVERR, [1], 4) = 0
+[pid 122189] connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+[pid 122189] sendmmsg(3, [{msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\352I\1 \0\1\0\0\0\0\0\1\5cdn01\4quay\2io\0\0\1\0\1\0"..., iov_len=42}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=42}, {msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\357D\1 \0\1\0\0\0\0\0\1\5cdn01\4quay\2io\0\0\34\0\1\0"..., iov_len=42}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=42}], 2, MSG_NOSIGNAL) = 2
+[pid 122189] recvfrom(3, "\352I\201\200\0\1\0\4\0\0\0\1\5cdn01\4quay\2io\0\0\1\0\1\300"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 147
+[pid 122189] recvfrom(3, "\357D\201\200\0\1\0\4\0\0\0\3\5cdn01\4quay\2io\0\0\34\0\1\300"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, [28 => 16]) = 203
+[pid 122189] socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 3
+[pid 122189] bind(3, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+[pid 122189] getsockname(3, {sa_family=AF_NETLINK, nl_pid=122187, nl_groups=00000000}, [12]) = 0
+[pid 122189] sendto(3, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1739222399, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+[pid 122189] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, {ifa_family=AF_INET, ifa_prefixlen=32, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("ens4")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("10.186.0.3")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("10.186.0.3")], [{nla_len=9, nla_type=IFA_LABEL}, "ens4"], [{nla_len=8, nla_type=IFA_FLAGS}, 0], [{nla_len=8, nla_type=IFA_RT_PRIORITY}, 100], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=72363, ifa_valid=72363, cstamp=457, tstamp=34560801}]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 164
+[pid 122189] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=72, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=298, tstamp=298}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("ens4")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::4001:aff:feba:3")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=451, tstamp=451}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x03"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 152
+[pid 122189] recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1739222399, nlmsg_pid=122187}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+[pid 122189] socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122189] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("2.16.56.93")}, 16) = 0
+[pid 122189] getsockname(3, {sa_family=AF_INET, sin_port=htons(60932), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122189] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122189] connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("2.16.56.86")}, 16) = 0
+[pid 122189] getsockname(3, {sa_family=AF_INET, sin_port=htons(59444), sin_addr=inet_addr("10.186.0.3")}, [28 => 16]) = 0
+[pid 122189] socket(AF_INET6, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+[pid 122189] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2a02:26f0:3500:3::b818:4d42", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122189] connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 122189] connect(3, {sa_family=AF_INET6, sin6_port=htons(0), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2a02:26f0:3500:3::b818:4d4f", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+[pid 122189] socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+[pid 122189] connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("2.16.56.93")}, 16) = -1 EINPROGRESS (Operation now in progress)
+[pid 122190] getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+[pid 122190] getpeername(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("2.16.56.93")}, [112 => 16]) = 0
+[pid 122190] getsockname(3, {sa_family=AF_INET, sin_port=htons(43558), sin_addr=inet_addr("10.186.0.3")}, [112 => 16]) = 0
+[pid 122190] setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+[pid 122190] setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+[pid 122190] setsockopt(3, SOL_TCP, TCP_KEEPINTVL, [30], 4) = 0
+[pid 122190] setsockopt(3, SOL_TCP, TCP_KEEPIDLE, [30], 4) = 0
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122189] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122195] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122195] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122190] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122195] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122195] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122190] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+[pid 122193] --- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=122187, si_uid=1002} ---
+time="2025-02-10T21:20:09Z" level=debug msg="Error deleting temporary directory: <nil>"
+time="2025-02-10T21:20:09Z" level=fatal msg="reading blob sha256:96ed9c4aa62dce9988bfe11b70c53eea09d86e2395b7dc076c039eda60f928ab: Get \"https://cdn01.quay.io/quayio-production-s3/sha256/96/96ed9c4aa62dce9988bfe11b70c53eea09d86e2395b7dc076c039eda60f928ab?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAI5LUAQGPZRPNKSJA%2F20250210%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250210T211959Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=3146ea98ce90646210c608806b65ee6f84d4d983f0389f3d3c63975302af1083&region=us-east-1&namespace=jonathankingfc&username=jonathankingfc&repo_name=test-akamai&akamai_signature=exp=1739223299~hmac=9294681000a4cc2ec53804d77c0fad4c90812a15b5b9f5b3d81e83c7e53dae91\": net/http: TLS handshake timeout"
+[pid 122195] +++ exited with 1 +++
+[pid 122194] +++ exited with 1 +++
+[pid 122193] +++ exited with 1 +++
+[pid 122192] +++ exited with 1 +++
+[pid 122191] +++ exited with 1 +++
+[pid 122190] +++ exited with 1 +++
+[pid 122189] +++ exited with 1 +++
+[pid 122188] +++ exited with 1 +++
++++ exited with 1 +++
